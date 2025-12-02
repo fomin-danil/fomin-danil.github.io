@@ -1,0 +1,302 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background-color: #ffffff;
+  color: #211f20;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 32px 16px;
+}
+
+.resume {
+  max-width: 960px;
+  width: 100%;
+  padding: 40px 56px 48px;
+  margin: 0 auto;
+}
+
+.resume__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.resume__title-block {
+  flex: 1 1 auto;
+}
+
+.resume__meta {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #211f20;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.resume__meta-role {
+  font-weight: 600;
+}
+
+.resume__name {
+  font-size: 36px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+  font-weight: 900;
+}
+
+.resume__position {
+  margin: 0;
+  font-size: 14px;
+  color: #211f20;
+}
+
+.resume__photo-wrapper {
+  flex: 0 0 160px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.resume__photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.resume__summary {
+  margin-top: 28px;
+  font-size: 14px;
+  color: #211f20;
+}
+
+.resume__divider {
+  border: none;
+  border-top: 1px solid rgba(33, 31, 32, 0.08);
+  margin: 28px 0;
+}
+
+.resume-section__title {
+  font-size: 16px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+  color: #211f20;
+  font-weight: 700;
+}
+
+.resume-section__title--small {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+}
+
+.resume-section--bottom {
+  margin-top: 4px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: minmax(120px, 170px) minmax(0, 1fr);
+  column-gap: 40px;
+  font-size: 14px;
+}
+
+.timeline-item + .timeline-item {
+  margin-top: 20px;
+}
+
+.timeline-item__period {
+  font-size: 12px;
+  color: rgba(33, 31, 32, 0.7);
+  padding-top: 2px;
+}
+
+.timeline-item__role {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 2px;
+  color: #211f20;
+  font-weight: 700;
+}
+
+.timeline-item__company {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: rgba(33, 31, 32, 0.7);
+}
+
+.timeline-item__description {
+  margin: 0 0 8px;
+  color: rgba(33, 31, 32, 0.9);
+}
+
+.timeline-item__subtitle {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin: 0 0 4px;
+  color: #211f20;
+}
+
+.timeline-item__list {
+  margin: 0;
+  padding-left: 0;
+  color: rgba(33, 31, 32, 0.9);
+  list-style: none;
+}
+
+.timeline-item__list li + li {
+  margin-top: 4px;
+}
+
+.timeline-item__list li {
+  display: grid;
+  grid-template-columns: 1.6em 1fr;
+}
+
+.timeline-item__list li::before {
+  content: "—";
+  grid-column: 1;
+}
+
+.timeline-item__bullet-text {
+  grid-column: 2;
+}
+
+.resume__contacts-inline {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  font-size: 12px;
+}
+
+.resume__contacts-inline li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.resume__contacts-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(33, 31, 32, 0.6);
+}
+
+.resume__contacts-inline a {
+  color: #5a72ff;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.resume__contacts-separator {
+  color: rgba(33, 31, 32, 0.7);
+  font-size: 12px;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .page {
+    padding: 24px 12px;
+  }
+
+  .resume {
+    padding: 32px 24px 36px;
+  }
+
+  .resume__name {
+    font-size: 30px;
+  }
+
+  .timeline-item {
+    column-gap: 24px;
+  }
+
+  .resume-columns {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 16px 8px;
+  }
+
+  .resume {
+    padding: 24px 18px 28px;
+  }
+
+  .resume__header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .resume__photo-wrapper {
+    display: none;
+  }
+
+  .resume__photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .resume__name {
+    font-size: 26px;
+  }
+
+  .resume__position {
+    font-size: 13px;
+  }
+
+  .timeline-item {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 4px;
+  }
+
+  .timeline-item__period {
+    order: -1;
+  }
+
+  .resume-columns {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contacts-list__label {
+    width: 72px;
+  }
+}
+
+
