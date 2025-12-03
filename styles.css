@@ -189,8 +189,6 @@ a:hover {
 .timeline-item__list li::before {
   content: "—";
   grid-column: 1;
-  display: flex;
-  align-items: center;
 }
 
 .timeline-item__bullet-text {
@@ -333,4 +331,8 @@ a:hover {
 }
 .resume-section .timeline-item__bullet-text {
   font-size: 14px;
+}
+.centered-bullets li::before {
+  display: flex;
+  align-items: center;
 }
