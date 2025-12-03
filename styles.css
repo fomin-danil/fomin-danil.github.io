@@ -11,7 +11,7 @@ body {
 }
 
 body {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+  font-family: "Mulish", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
   background-color: #ffffff;
   color: #211f20;
@@ -44,10 +44,12 @@ a:hover {
   justify-content: space-between;
   align-items: flex-start;
   gap: 32px;
+  position: relative; /* Added for positioning context */
 }
 
 .resume__title-block {
   flex: 1 1 auto;
+  padding-right: 192px; /* Space for the 160px photo + 32px gap */
 }
 
 .resume__meta {
@@ -80,9 +82,10 @@ a:hover {
 }
 
 .resume__photo-wrapper {
-  flex: 0 0 160px;
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 160px; /* Explicit width */
 }
 
 .resume__photo {
@@ -186,6 +189,8 @@ a:hover {
 .timeline-item__list li::before {
   content: "—";
   grid-column: 1;
+  display: flex;
+  align-items: center;
 }
 
 .timeline-item__bullet-text {
@@ -260,17 +265,29 @@ a:hover {
   }
 
   .resume__header {
-    flex-direction: column-reverse;
-    align-items: flex-start;
+    /* flex-direction: column-reverse; - Removed, default row is fine */
+    align-items: flex-start; /* Keep as is, or adjust if needed for overall header alignment */
+  }
+
+  .resume__title-block {
+    display: flex; /* Make title block a flex container */
+    align-items: center; /* Vertically align name and photo */
+    flex-wrap: wrap; /* Allow wrapping if content is too long */
+    padding-right: 0; /* Remove padding for mobile */
   }
 
   .resume__photo-wrapper {
-    display: none;
+    position: static; /* Reset position */
+    display: block;
+    flex: none;
+    margin-left: 10px;
+    width: auto; /* Reset width */
   }
 
   .resume__photo {
-    width: 120px;
-    height: 120px;
+    width: 26px; /* New width */
+    height: 26px; /* New height */
+    border-radius: 4px; /* Rounded corners */
   }
 
   .resume__name {
@@ -299,4 +316,21 @@ a:hover {
   }
 }
 
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 
+.skills-list li {
+  background-color: #f0f0f0;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.resume-section .timeline-item__bullet-text {
+  font-size: 14px;
+}

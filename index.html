@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -28,8 +28,15 @@
         <header class="resume__header">
           <div class="resume__title-block">
             <h1 class="resume__name">Данил Фомин</h1>
+            <div class="resume__photo-wrapper">
+                <img
+                    src="assets/cv.png"
+                    alt="Фотография"
+                    class="resume__photo"
+                />
+            </div>
             <p class="resume__position">
-              Привет! Я&nbsp;руковожу в&nbsp;IT&nbsp;EdTech и&nbsp;более трёх лет
+              Привет! Я&nbsp;руковожу командой в&nbsp;IT&nbsp;EdTech и&nbsp;более трёх лет
               проектирую обучение. Сейчас мне&nbsp;интересно поработать с&nbsp;T&amp;D, управлением продуктом в&nbsp;образовании и&nbsp;продюсированием контента в&nbsp;IT.
             </p>
             <ul class="resume__contacts-inline">
@@ -52,13 +59,6 @@
               </li>
             </ul>
           </div>
-          <div class="resume__photo-wrapper">
-            <img
-              src="assets/cv.png"
-              alt="Фотография"
-              class="resume__photo"
-            />
-          </div>
         </header>
 
         <hr class="resume__divider" />
@@ -71,7 +71,7 @@
               <h3 class="timeline-item__role">Тимлид команды контента, кластер IT</h3>
               <div class="timeline-item__company">Eduson</div>
               <p class="timeline-item__description">
-                Руковожу командой разработки из трёх человек. Лидирую задачи от бюджетирования и проектного планирования до обучения, продуктовых исследований по новым запускам и управления ростом внутри команды.
+                Руковожу командой методистов, лидирую задачи от бюджетирования и проектного планирования до обучения, продуктовых исследований по новым запускам и управления ростом внутри команды.
               </p>
               <h4 class="timeline-item__subtitle">Кейсы</h4>
               <ul class="timeline-item__list">
@@ -117,28 +117,20 @@
               </h3>
               <div class="timeline-item__company">Eduson</div>
               <p class="timeline-item__description">
-                Спроектировал, разработал и обновил 10+ продуктов по IT-специальностям и менеджменту: back- и frontend, QA, бизнес-анализ, COO и CIO. Оунерил весь цикл разработки: рисерч, проектирование, аудит, разработка, студийные/удалённые съёмки, сбор обратной связи и метрик, рефакторинг. Работал с видео, текстом, интерактивными тренажёрами, практическими заданиями, кейсами и большими проектами на 20+ часов.
+                Спроектировал, разработал и обновил 10+ продуктов по IT-специальностям и менеджменту: back- и frontend, QA, бизнес-анализ, COO и CIO. Оунерил весь цикл разработки: рисерч, проектирование, аудит, разработка, студийные/удалённые съёмки, сбор обратной связи и метрик, рефакторинг. Работал с видео, текстом, интерактивными тренажёрами, практическими заданиями, кейсами и большими проектами на 20+ часов контента.
               </p>
               <h4 class="timeline-item__subtitle">Кейсы</h4>
               <ul class="timeline-item__list">
                 <li>
                   <span class="timeline-item__bullet-text">
                     <strong>В сжатые сроки разработал MVP детского курса по Python:</strong>
-                    спроектировал касания, флоу и образовательный путь с учётом
-                    детской специфики, разработал практические задания, сквозные
-                    проекты и заоунерил съёмки для двух модулей. Проект был
-                    запущен вовремя и дал опыт работы с геймификацией и
-                    сторителлингом.
+                    спроектировал касания, флоу и образовательный путь с учётом детской специфики, разработал практические задания, сквозные проекты и заоунерил съёмки для двух модулей. Вовремя запустил проект, наработал опыт работы с инструментами геймификации и сторителлингом.
                   </span>
                 </li>
                 <li>
                   <span class="timeline-item__bullet-text">
-                    <strong>Залидировал дипломный проект для курса по fullstack-разработке</strong>
-                    на JavaScript: спроектировал образовательный путь студента,
-                    разработал дизайн-макет и ТЗ с функциональными требованиями
-                    для эксперта, описал API и алгоритм проверки. Студенты
-                    получили опыт fullstack-разработки и добавили в портфолио
-                    CRUD-приложение на React, TypeScript и Node.js.
+                    <strong>Залидировал дипломный проект для курса по fullstack-разработке на JavaScript:</strong>
+                     спроектировал образовательный путь студента, разработал дизайн-макет и ТЗ с функциональными требованиями для эксперта, описал API, алгоритм проверки. Студенты получили опыт fullstack-разработки и добавили в портфолио CRUD-приложение на React, TypeScript и Node.js.
                   </span>
                 </li>
               </ul>
@@ -155,12 +147,40 @@
                 MITM / Московский институт технологий и управления
               </div>
               <p class="timeline-item__description">
-                Спродюсировал разработку шести программ ВО и ДПО по менеджменту
-                и IT. Спланировал и провёл кастдев для запуска B2C-курса по
-                графическому дизайну.
+                Спродюсировал разработку 6 ВО и ДПО программ по менеджменту и IT. Спланировал и провёл кастдев для запуска B2C-курса по графическому дизайну.
               </p>
             </div>
           </article>
+        </section>
+
+
+
+        <hr class="resume__divider" />
+
+        <section class="resume-section">
+          <h2 class="resume-section__title">Что умею</h2>
+          <ul class="timeline-item__list">
+            <li>
+              <span class="timeline-item__bullet-text">
+                Проектировать и разрабатывать образовательные продукты по IT для апскиллеров, рескиллеров, C-level и детской ЦА.
+              </span>
+            </li>
+            <li>
+              <span class="timeline-item__bullet-text">
+                Планировать и вести долгосрочные проекты.
+              </span>
+            </li>
+            <li>
+              <span class="timeline-item__bullet-text">
+                Сетапить бизнес-процессы и оптимизировать узкие места.
+              </span>
+            </li>
+            <li>
+              <span class="timeline-item__bullet-text">
+                Работать с продуктовой стороной разработки образовательного контента: конверсией, LTV, CSAT и NPS.
+              </span>
+            </li>
+          </ul>
         </section>
 
         <hr class="resume__divider" />
@@ -181,6 +201,18 @@
           </article>
 
           <article class="timeline-item">
+            <div class="timeline-item__period">2017 — 2018</div>
+            <div class="timeline-item__content">
+              <h3 class="timeline-item__role">
+                Языковая стажировка, факультет журналистики
+              </h3>
+              <div class="timeline-item__company">
+                Чжэцзянский научно-технический университет, Ханчжоу
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
             <div class="timeline-item__period">2015 — 2019</div>
             <div class="timeline-item__content">
               <h3 class="timeline-item__role">
@@ -189,18 +221,6 @@
               <div class="timeline-item__company">
                 Исторический факультет, Алтайский государственный университет,
                 Барнаул
-              </div>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="timeline-item__period">2017 — 2018</div>
-            <div class="timeline-item__content">
-              <h3 class="timeline-item__role">
-                Языковая стажировка, факультет журналистики
-              </h3>
-              <div class="timeline-item__company">
-                Чжэцзянский научно-технический университет, Ханчжоу
               </div>
             </div>
           </article>
